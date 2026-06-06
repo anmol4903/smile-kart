@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Doctors | Smile Kraft Dental Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#cca830",
+                    "primary-fixed": "#93f2f2",
+                    "outline-variant": "#bdc9c8",
+                    "surface-dim": "#dadada",
+                    "outline": "#6e7979",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#76d6d5",
+                    "surface-tint": "#006a6a",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-secondary-container": "#56656e",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#006565",
+                    "background": "#f9f9f9",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#002020",
+                    "primary-fixed-dim": "#76d6d5",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-secondary-fixed": "#0f1d25",
+                    "on-primary-container": "#e3fffe",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#735c00",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "secondary": "#526069",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "inverse-surface": "#2f3131",
+                    "on-surface-variant": "#3e4949",
+                    "surface-container-low": "#f3f3f4",
+                    "secondary-fixed-dim": "#bac9d3",
+                    "tertiary-fixed": "#ffe088",
+                    "on-secondary-fixed-variant": "#3b4951",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e5ef",
+                    "secondary-container": "#d3e2ed",
+                    "primary-container": "#008080",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#004f4f",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(0, 101, 101, 0.05), transparent),
+                        radial-gradient(circle at bottom left, rgba(115, 92, 0, 0.03), transparent);
+        }
+    
+        /* ===== Mobile Nav ===== */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .hamburger-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #hamburger-btn.is-open .bar1 { transform: translateY(7px) rotate(45deg); }
+        #hamburger-btn.is-open .bar2 { opacity: 0; }
+        #hamburger-btn.is-open .bar3 { transform: translateY(-7px) rotate(-45deg); }
+
+        </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/20 shadow-[0px_30px_50px_rgba(0,128,128,0.08)]">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-primary tracking-tight" href="index.html">Smile Kraft</a>
+            <div class="hidden md:flex items-center gap-lg">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="testi.html">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="doc.html">Doctors</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+            </div>
+            <a class="hidden md:inline-flex bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95" href="apt.html">Book Appointment</a>
+            <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 text-primary focus:outline-none" aria-label="Toggle menu">
+            <span class="hamburger-bar bar1"></span>
+            <span class="hamburger-bar bar2"></span>
+            <span class="hamburger-bar bar3"></span>
+        </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 px-4 pb-4 space-y-1">
+            <a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="testi.html">Testimonials</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="doc.html">Doctors</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="gallery.html">Gallery</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="about.html">About</a>
+            <div class="pt-2">
+                <a href="apt.html" class="block w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95">Book Appointment</a>
+            </div>
+        </div>
+        </nav>
+<main class="pt-32 pb-xl hero-gradient">
+<!-- Header Section -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop mb-xl text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-4">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                ELITE CLINICAL EXPERTISE
+            </div>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 max-w-3xl">Architecting Smiles with Surgical Precision &amp; Artistry</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Meet the visionary MDS specialists behind Smile Kraft, where medical excellence meets personalized luxury dental care.</p>
+</section>
+<!-- Doctors Grid -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop space-y-xl">
+<!-- Dr. Syed Zaki Anwar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-5 relative group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden glass-card shadow-2xl relative z-10">
+<img alt="Dr. Syed Zaki Anwar" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" data-alt="A professional, high-end portrait of Dr. Syed Zaki Anwar in a clean, modern medical setting. He is wearing a crisp white doctor's coat over a formal shirt, reflecting a confident and welcoming demeanor. The lighting is soft and airy, typical of a luxury light-mode dental clinic. The background consists of soft-focus medical equipment and translucent glass surfaces with teal accents from the clinic's branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPPqBM-kaQovZCfxj8rzrjgEkCCKuXPCcdF3F5FfICTvQ9TqZjhqrMEtE3hPppbMryBOu7sBzehYe3JFSq5r5huM6G50GRoJwPx7nvRni0Kq-2CtpKiE8K22o--y_ERy3IQcM5oDGLD1DurRhoKEaHVvNpFNpYBj9xcnkBBS90PvTSsiiHC7tS03on6y2mouHrU86TCHzlFJblK8Gq12h8SfdEDVJB0DKac7JwuSFYMR4G0FltuD8qI0Bs8mguPWUfON1Ugsua3eA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+</div>
+<div class="lg:col-span-7 space-y-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Dr. Syed Zaki Anwar</h2>
+<p class="font-headline-sm text-headline-sm text-primary">MDS Conservative Dentistry &amp; Endodontics</p>
+</div>
+<div class="flex gap-4 flex-wrap">
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span> 15+ Years Experience
+                        </span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">school</span> MDS Specialist
+                        </span>
+</div>
+<div class="glass-card p-8 rounded-xl shadow-sm space-y-md">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Education &amp; Background</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Specialized in advanced micro-endodontics and aesthetic restorations. His academic journey is marked by a commitment to mastering the most complex root canal therapies and restorative procedures.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Clinical Specializations</h4>
+<ul class="font-body-md text-body-md text-on-surface-variant grid grid-cols-2 gap-2">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Micro-Endodontics</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Single-Visit RCT</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Aesthetic Fillings</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Dental Trauma Management</li>
+</ul>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="font-body-md italic text-on-surface-variant">
+                                "My philosophy centers on preserving the natural tooth structure through microscopic precision. In dentistry, what is invisible to the naked eye often makes the difference between success and failure."
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Dr. Mariyam Zaki -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start pt-xl">
+<div class="lg:col-span-7 order-2 lg:order-1 space-y-md">
+<div class="lg:text-right">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Dr. Mariyam Zaki</h2>
+<p class="font-headline-sm text-headline-sm text-tertiary">MDS Prosthodontics &amp; Crown &amp; Bridge</p>
+</div>
+<div class="flex gap-4 flex-wrap lg:justify-end">
+<span class="px-4 py-1.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span> VIP Smile Architect
+                        </span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span> 12+ Years Experience
+                        </span>
+</div>
+<div class="glass-card p-8 rounded-xl shadow-sm space-y-md border-r-4 border-r-tertiary/20">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Education &amp; Mastery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">An expert in oral rehabilitation and cosmetic smile design. Her focus lies at the intersection of functional bite mechanics and the aesthetic harmony of a perfect smile.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Clinical Specializations</h4>
+<ul class="font-body-md text-body-md text-on-surface-variant grid grid-cols-2 gap-2">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Digital Smile Design</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Full Mouth Rehab</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Porcelain Veneers</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Implant Prosthetics</li>
+</ul>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="font-body-md italic text-on-surface-variant lg:text-right">
+                                "A smile is more than just teeth; it's a reflection of confidence. I combine engineering principles with artistic vision to restore not just dental function, but the patient's vibrant personality."
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 relative group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden glass-card shadow-2xl relative z-10">
+<img alt="Dr. Mariyam Zaki" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated professional portrait of Dr. Mariyam Zaki in an elegant, modern dental studio setting. She is wearing a professional medical blazer, projecting warmth and clinical authority. The lighting is high-end and cinematic, using warm tones that complement the luxury dental branding. The background is minimalist, with soft bokeh highlighting high-tech dental restorative tools and a clean white interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhnBo6haWQBlXujyBuwN-ozpsVohUbWwEgd5fpVaqaeq7cmoZrzw_ZBhfwjYaUiDGhEM1WGS5vrK8sik0wjuGBVo6trJygoOcg3AeXKLgYexn-jPhrw_iLJP-GtIWAPfVW_QBLnLfx2ZJ8vE2EFIJ7cfd539_VLrz0LnJiXdpzFrrqcA3ry0ea-Zk6tjdEDZyvEfONCNaGAEqG0_kOuHAfmMo55pJFTSJZ1ZdnARKg_ZFP-nfiQblY4wO1zMupTcinEfIWagERs1A"/>
+</div>
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-tertiary/10 rounded-full blur-3xl -z-0"></div>
+</div>
+</div>
+</section>
+<!-- Recognition/Trust Section -->
+<section class="mt-xl py-xl bg-surface-container-low border-y border-outline-variant/20">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md text-center">
+<div class="space-y-2">
+<div class="font-display-lg text-primary">5k+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Successful RCTs</div>
+</div>
+<div class="space-y-2">
+<div class="font-display-lg text-primary">1k+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Smile Makeovers</div>
+</div>
+<div class="space-y-2">
+<div class="font-display-lg text-primary">25+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Combined Years</div>
+</div>
+<div class="space-y-2">
+<div class="font-display-lg text-primary">100%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">MDS Expertise</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="space-y-4">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Smile Kraft</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expert dental care delivered with compassion and advanced technology in the heart of the city.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Quick Links</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Patient Portal</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Treatments</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Clinic</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Legal</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-4 border-t border-outline-variant/20 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Smile Kraft Dental Clinic &amp; Orthodontic Center. All rights reserved.</p>
+</div>
+</footer>
+<!-- Interactive Layer -->
+<script>
+        // Simple scroll effect for glass navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Hover animation logic for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    
+
+    // Hamburger menu toggle
+    (function() {
+        var btn = document.getElementById('hamburger-btn');
+        var menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function() {
+            btn.classList.toggle('is-open');
+            menu.classList.toggle('open');
+        });
+        // Close on link click
+        menu.querySelectorAll('a, button').forEach(function(el) {
+            el.addEventListener('click', function() {
+                btn.classList.remove('is-open');
+                menu.classList.remove('open');
+            });
+        });
+    })();
+    </script>
+    
+</body></html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Smile Kraft Dental Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#cca830",
+                    "primary-fixed": "#93f2f2",
+                    "outline-variant": "#bdc9c8",
+                    "surface-dim": "#dadada",
+                    "outline": "#6e7979",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#76d6d5",
+                    "surface-tint": "#006a6a",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-secondary-container": "#56656e",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#006565",
+                    "background": "#f9f9f9",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#002020",
+                    "primary-fixed-dim": "#76d6d5",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-secondary-fixed": "#0f1d25",
+                    "on-primary-container": "#e3fffe",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#735c00",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "secondary": "#526069",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "inverse-surface": "#2f3131",
+                    "on-surface-variant": "#3e4949",
+                    "surface-container-low": "#f3f3f4",
+                    "secondary-fixed-dim": "#bac9d3",
+                    "tertiary-fixed": "#ffe088",
+                    "on-secondary-fixed-variant": "#3b4951",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e5ef",
+                    "secondary-container": "#d3e2ed",
+                    "primary-container": "#008080",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#004f4f",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 101, 101, 0.15);
+        }
+    
+        /* ===== Mobile Nav ===== */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .hamburger-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #hamburger-btn.is-open .bar1 { transform: translateY(7px) rotate(45deg); }
+        #hamburger-btn.is-open .bar2 { opacity: 0; }
+        #hamburger-btn.is-open .bar3 { transform: translateY(-7px) rotate(-45deg); }
+
+        </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/20 shadow-[0px_30px_50px_rgba(0,128,128,0.08)]">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-primary tracking-tight" href="index.html">Smile Kraft</a>
+            <div class="hidden md:flex items-center gap-lg">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="testi.html">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="doc.html">Doctors</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+            </div>
+            <a class="hidden md:inline-flex bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95" href="apt.html">Book Appointment</a>
+            <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 text-primary focus:outline-none" aria-label="Toggle menu">
+            <span class="hamburger-bar bar1"></span>
+            <span class="hamburger-bar bar2"></span>
+            <span class="hamburger-bar bar3"></span>
+        </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 px-4 pb-4 space-y-1">
+            <a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="testi.html">Testimonials</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="doc.html">Doctors</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="gallery.html">Gallery</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="about.html">About</a>
+            <div class="pt-2">
+                <a href="apt.html" class="block w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95">Book Appointment</a>
+            </div>
+        </div>
+        </nav>
+</header>
+<main class="pt-24 overflow-hidden">
+<!-- Hero Section: The Smile Kraft Identity -->
+<section class="relative px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-md items-center">
+<div class="space-y-sm">
+<span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm tracking-widest uppercase">Premium Dental Care</span>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">Elevating Oral Wellness in Lucknow</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        At Smile Kraft, we believe dental care is not just a procedure; it's a journey towards confidence, health, and a more vibrant life.
+                    </p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-2xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+<img alt="Smile Kraft Clinic Exterior" class="relative rounded-xl shadow-2xl w-full object-cover h-[500px]" data-alt="A luxurious, modern dental clinic exterior in Lucknow featuring sleek glass windows and a polished stone facade. The architecture is contemporary with soft warm architectural lighting highlighting the 'Smile Kraft' logo. The surroundings are clean and landscaped, reflecting a high-end medical boutique atmosphere under a clear evening sky with soft teal and white color tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAt3sl5cMmQFsxTYNjJo4u5N75knd-nqJqLUVoslYqFpJ9sr6m3NLX0gz4Q4k-qaMsOWYmgJ0Bu8K9EB3Z9ntrst6nBIQD74iPKDcR1DgXTshWNC2HxukIvron6m-P-eQ3zm4NZH5G5LBtC9jJpt2FlDas5is89cH9p6YnmRmerwZNTzqJ_TJyKdQH8XLisJ0mPtKDMB5qGZKnNLaG65ZkqJGJ3S62dYCO76rIGWDuIL4CgKIfsurTiY4-sFy1l-C_wie_9djZ3Q"/>
+</div>
+</div>
+</section>
+<!-- Our Story: The Lucknow Legacy -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/2">
+<img alt="Clinic Interior Team" class="rounded-xl shadow-lg border border-white/40" data-alt="A professional and friendly team of dentists and staff in clean, modern medical scrubs standing inside a bright, glassmorphic clinic lobby. The lighting is bright and high-key, creating an atmosphere of cleanliness and premium care. The background features translucent partitions and soft teal accents, while the team members are smiling warmly, conveying trust and elite healthcare standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU379Kdm5GT1SilQNvpkC9XYRvw6huWqzd_sXMGK2bkR8_AhfSNHgNSGLQlkYosUXGxhWhhIgwGaIwPIfXFUqXXryFUVTzTAe8B27494Zc4s59nEUTxC89YAzU4qgD2Tyr_BpuayFyOsDuvjVH1Dpz_bTmaTfppM0Y-wYXh3LjXXiVhHGmm8tr4GdSq_GWO1eFLfsUbtHZbqXt3maSqbDYQgdXzhtGo1cskq3cBOWutIwFjXQKGgy26BIsSQIZ3OM-wpZZkU5DJcQ"/>
+</div>
+<div class="w-full md:w-1/2 space-y-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Story</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Founded in the heart of Lucknow, Smile Kraft was born from a singular vision: to redefine the dental experience. We noticed that clinical environments often felt cold and intimidating. We chose a different path.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            By combining world-class orthodontic technology with the warmth of luxury hospitality, we created a sanctuary for oral health. Our journey has been defined by the thousands of smiles we've crafted, each a testament to our commitment to precision and patient comfort.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision: Bento Grid Layout -->
+<section class="py-xl max-w-[1440px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-full">
+<!-- Mission Card -->
+<div class="md:col-span-2 glass-card p-lg rounded-xl flex flex-col justify-between group glow-hover transition-all duration-300">
+<div>
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="flag">flag</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Our Mission</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            To provide personalized, pain-free dental care using state-of-the-art technology while ensuring our patients feel valued, informed, and at ease in a luxury setting.
+                        </p>
+</div>
+<div class="mt-xl h-48 rounded-lg overflow-hidden">
+<img alt="Mission Focus" class="w-full h-full object-cover" data-alt="A close-up shot of modern dental equipment like a digital scanner or professional dental light in a sterile, high-end environment. The lighting is focused and cinematic with a soft teal glow and white highlights, emphasizing technology, precision, and the clinic's advanced medical standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADZ0sMZJwb7bLxPV0CU1KfZUSw-FjXohE4OCj3DHw2PGzb68jI-iR6dpXRuE_tSwa9Cb3RCRBZ88YVIZdHtQEqgzNmVbBMazzT2yTmQDMyC4iL-yyEDXpKDY5LLeq-CCEBp_NFoY6gABK8_Pi8Tgzvdrg4q8t2HswCYyPyVsC6ptlCnLxeHmWW9FUFq57SiQc8sYmXme1l2Uaj_b9VsrBHzCeGj8eJt8eKzR2Gj6vG6X3MtVOA6UPfD4Folbx52AGVTQw2Tdkl0aM"/>
+</div>
+</div>
+<!-- Vision Card -->
+<div class="glass-card p-lg rounded-xl flex flex-col bg-primary-container text-on-primary-container group glow-hover transition-all duration-300">
+<div class="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Our Vision</h3>
+<p class="font-body-md text-body-md opacity-90">
+                        To be the leading destination for aesthetic and orthodontic excellence in North India, known for transforming lives through beautiful, healthy smiles and compassionate care.
+                    </p>
+<div class="mt-auto pt-md flex items-end">
+<span class="text-display-lg font-bold opacity-10">2030</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values: Horizontal Scrolling or Minimal Grid -->
+<section class="bg-surface-container-highest py-xl">
+<div class="max-w-[1440px] mx-auto px-margin-desktop text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Core Values</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-xs rounded-full"></div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="p-md text-center group cursor-default">
+<div class="text-primary mb-sm scale-100 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="verified">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Integrity</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unwavering ethical standards in every diagnosis and treatment plan.</p>
+</div>
+<div class="p-md text-center group cursor-default">
+<div class="text-primary mb-sm scale-100 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Precision</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Meticulous attention to detail utilizing the latest dental innovations.</p>
+</div>
+<div class="p-md text-center group cursor-default">
+<div class="text-primary mb-sm scale-100 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Empathy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Understanding the unique fears and needs of every patient.</p>
+</div>
+<div class="p-md text-center group cursor-default">
+<div class="text-primary mb-sm scale-100 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Excellence</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Striving for clinical perfection and unmatched luxury service.</p>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: Asymmetric Layout -->
+<section class="py-xl max-w-[1440px] mx-auto px-margin-desktop overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1 space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Choose Us?</h2>
+<ul class="space-y-sm">
+<li class="flex items-start gap-sm group">
+<div class="mt-1 bg-primary text-on-primary rounded-full p-1 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="check">check</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Advanced Orthodontics</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pioneers in clear aligners and modern bracing techniques in Lucknow.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm group">
+<div class="mt-1 bg-primary text-on-primary rounded-full p-1 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="check">check</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Boutique Experience</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Wait-less appointments in a tranquil, hospitality-inspired environment.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm group">
+<div class="mt-1 bg-primary text-on-primary rounded-full p-1 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="check">check</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Expert Specialists</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A curated team of clinicians with decades of collective expertise.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm group">
+<div class="mt-1 bg-primary text-on-primary rounded-full p-1 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="check">check</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary">Transparent Pricing</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No hidden costs. Clear communication on every step of your plan.</p>
+</div>
+</li>
+</ul>
+<div class="pt-md">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-lg text-label-lg hover:bg-primary/90 transition-all shadow-lg glow-hover">
+                            Meet Our Specialists
+                        </button>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative glass-card p-4 rounded-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Luxury Consultation" class="rounded-xl shadow-xl" data-alt="A wide-angle shot of a luxurious dental consultation room. It features a sleek, ergonomic patient chair, warm wooden accents, and soft ambient lighting. Large glass partitions show a glimpse of the modern Lucknow cityscape outside. The overall atmosphere is serene, high-end, and reminiscent of a luxury spa, focusing on patient comfort and premium wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXGFARtKDoiaoJxDh9CbUSbN6OZmzxkZ9DHEUD2V_ENPnC-jzODArn0-U-ydVAZSVqfrOGOkaD8CpfChkEX-mTSR10t7WHyUHuxFNxQSctIvDD9cHD2iYyNYtBPJnlfVy924VWXOnr1pxfjWzGsro7t8IlgxwpqEG4ztVzwUfJy7gxA3n43PWdjdsIObAhtF81wAiix446BymU0lvkBbJf4VBcmr0ZWvT_KbBIiSUcghH2JGWQk2MA4_j5seuVNCqNLiUskVzTGR8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop py-xl">
+<div class="bg-primary rounded-3xl p-lg md:p-xl text-center text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-md">
+<h2 class="font-display-lg text-display-lg">Ready to transform your smile?</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-2xl mx-auto">Experience the intersection of medical precision and luxury hospitality at Smile Kraft Dental Clinic.</p>
+<div class="flex flex-col sm:flex-row gap-sm justify-center pt-md">
+<button class="bg-white text-primary px-10 py-4 rounded-full font-label-lg text-label-lg hover:bg-surface-container-lowest transition-colors">
+                            Book an Appointment
+                        </button>
+<button class="border border-white/40 text-white px-10 py-4 rounded-full font-label-lg text-label-lg hover:bg-white/10 transition-colors">
+                            Contact Us
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full rounded-t-xl border-t border-outline-variant mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="space-y-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Smile Kraft</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lucknow's premier destination for luxury dental and orthodontic care.</p>
+</div>
+<div class="space-y-sm">
+<h6 class="font-label-lg text-label-lg text-primary">Services</h6>
+<ul class="space-y-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Dental Implants</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Orthodontics</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Cosmetic Dentistry</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Pediatric Care</li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h6 class="font-label-lg text-label-lg text-primary">Contact</h6>
+<p class="font-body-sm text-body-sm text-on-surface-variant">123 Royal Path, Hazratganj<br/>Lucknow, UP 226001</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">+91 522 123 4567</p>
+</div>
+<div class="space-y-sm">
+<h6 class="font-label-lg text-label-lg text-primary">Resources</h6>
+<ul class="space-y-xs font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Patient Portal</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-md border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Smile Kraft Dental Clinic &amp; Orthodontic Center. All rights reserved.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="mail">mail</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for glass cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Simple scroll reveal for fade-in effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+
+    // Hamburger menu toggle
+    (function() {
+        var btn = document.getElementById('hamburger-btn');
+        var menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function() {
+            btn.classList.toggle('is-open');
+            menu.classList.toggle('open');
+        });
+        // Close on link click
+        menu.querySelectorAll('a, button').forEach(function(el) {
+            el.addEventListener('click', function() {
+                btn.classList.remove('is-open');
+                menu.classList.remove('open');
+            });
+        });
+    })();
+    </script>
+</body></html>

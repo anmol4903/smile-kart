@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smile Kraft | Luxury Dental Gallery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#cca830",
+                    "primary-fixed": "#93f2f2",
+                    "outline-variant": "#bdc9c8",
+                    "surface-dim": "#dadada",
+                    "outline": "#6e7979",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#76d6d5",
+                    "surface-tint": "#006a6a",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-secondary-container": "#56656e",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#006565",
+                    "background": "#f9f9f9",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#002020",
+                    "primary-fixed-dim": "#76d6d5",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-secondary-fixed": "#0f1d25",
+                    "on-primary-container": "#e3fffe",
+                    "on-surface": "#1a1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary": "#735c00",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "secondary": "#526069",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "inverse-surface": "#2f3131",
+                    "on-surface-variant": "#3e4949",
+                    "surface-container-low": "#f3f3f4",
+                    "secondary-fixed-dim": "#bac9d3",
+                    "tertiary-fixed": "#ffe088",
+                    "on-secondary-fixed-variant": "#3b4951",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e5ef",
+                    "secondary-container": "#d3e2ed",
+                    "primary-container": "#008080",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#004f4f",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .masonry {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        .slider-handle {
+            cursor: ew-resize;
+        }
+    
+        /* ===== Mobile Nav ===== */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .hamburger-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #hamburger-btn.is-open .bar1 { transform: translateY(7px) rotate(45deg); }
+        #hamburger-btn.is-open .bar2 { opacity: 0; }
+        #hamburger-btn.is-open .bar3 { transform: translateY(-7px) rotate(-45deg); }
+
+        </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/20 shadow-[0px_30px_50px_rgba(0,128,128,0.08)]">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-primary tracking-tight" href="index.html">Smile Kraft</a>
+            <div class="hidden md:flex items-center gap-lg">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="testi.html">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="doc.html">Doctors</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+            </div>
+            <a class="hidden md:inline-flex bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95" href="apt.html">Book Appointment</a>
+            <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 text-primary focus:outline-none" aria-label="Toggle menu">
+            <span class="hamburger-bar bar1"></span>
+            <span class="hamburger-bar bar2"></span>
+            <span class="hamburger-bar bar3"></span>
+        </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 px-4 pb-4 space-y-1">
+            <a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="testi.html">Testimonials</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="doc.html">Doctors</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="gallery.html">Gallery</a>
+<a class="block py-3 px-4 font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" href="about.html">About</a>
+            <div class="pt-2">
+                <a href="apt.html" class="block w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-lg hover:shadow-lg transition-all active:scale-95">Book Appointment</a>
+            </div>
+        </div>
+        </nav>
+<!-- Hero Section -->
+<header class="pt-[160px] pb-xl px-margin-desktop max-w-[1440px] mx-auto text-center">
+<span class="inline-block px-sm py-xs bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">Visual Excellence</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-md">Our Gallery of Smiles</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto">
+            Explore the intersection of medical precision and aesthetic artistry. From luxury interiors to transformative results.
+        </p>
+</header>
+<!-- Before & After Interactive Slider -->
+<section class="px-margin-desktop mb-xl max-w-[1200px] mx-auto">
+<div class="glass-card p-md rounded-[32px] overflow-hidden shadow-xl">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Transformation Spotlight</h2>
+<div class="flex items-center gap-sm">
+<span class="px-sm py-xs bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm">Premium Result</span>
+</div>
+</div>
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden group select-none" id="slider-container">
+<!-- After Image -->
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="A high-definition close-up of a perfect, healthy smile with pearly white teeth and healthy pink gums. The lighting is soft and clinical, highlighting the natural texture and sheen of the dental work. The aesthetic is clean, luxurious, and medical, reflecting the high-end dental practice's quality results. The background is a soft, out-of-focus medical white clinic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVoqvRpF8EIhwlMk55A7vpF4lBLFgEHXjA5OsuYfAQJ2CpB1XVcMZsmpjT7DtuehUbwuJgXj9x8bKwH0x79tmUSV2PzHU7Q0LkOpOPQArwWmgoCJ-qfXU9w8XZnEkWZDomu6gByWv5OBxF87ds9O7iqutnV6rpQ5SvSCyFj0q9UYHY5J4cfGxPVYwHxEuUJp6uKNsDL6OdIuihYSsZwPkq92WwJT-d_1obpdEPl6K8TWMbeLPxS_SPIQ4FFKzeXVN0Kr-Pxq-P5E"/>
+</div>
+<!-- Before Image (Clipped) -->
+<div class="absolute inset-0 overflow-hidden w-1/2" id="before-image-clip">
+<img class="absolute inset-0 w-full h-full object-cover grayscale-[0.3]" data-alt="A detailed dental close-up showing misaligned and slightly discolored teeth before an orthodontic procedure. The lighting is clear and professional, maintaining a clinical but honest tone. The focus is sharp on the dental structure, emphasizing the need for corrective care. The overall palette is muted to contrast with the vibrant 'after' results in the clinical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUlamkKMK5p7_atvIVpW1ZRuyntw4KLUMr97YtqQfI5uCfqlxZP7wsfBC6Grq4yMoISAUwLYB9m_-PF9HYArCqNrmESH9UeqKtSpRoVx9kzyLWh84fmq0Yy7aOfo1fenoYFsFO-9TGnHhHJwNkWhQlg1i7SR419TjEa5BDoibGjmwHEWfhwfkhJmNZrVfgcmW6JG-OVfqLGwu2qR3ZgFMPJ9Fs1UjNgJGkPQO6utx5pUwmLMS6BzUjp6Yy9dUtmyBMswrDcsJN69o"/>
+</div>
+<!-- Handle -->
+<div class="absolute inset-y-0 left-1/2 w-1 bg-white/80 shadow-lg cursor-ew-resize flex items-center justify-center z-10" id="slider-handle">
+<div class="w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">unfold_more</span>
+</div>
+</div>
+<!-- Labels -->
+<div class="absolute bottom-6 left-6 z-20 pointer-events-none">
+<span class="bg-black/30 backdrop-blur-md text-white px-md py-sm rounded-lg font-label-lg text-label-lg">Before</span>
+</div>
+<div class="absolute bottom-6 right-6 z-20 pointer-events-none">
+<span class="bg-primary/80 backdrop-blur-md text-white px-md py-sm rounded-lg font-label-lg text-label-lg">After</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Gallery Grid -->
+<main class="px-margin-desktop mb-xl max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Experience the Atmosphere</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">A glimpse into our clinical standards and boutique environment.</p>
+</div>
+<div class="flex gap-sm overflow-x-auto pb-2 w-full md:w-auto">
+<button class="px-md py-sm bg-primary text-on-primary rounded-full font-label-sm text-label-sm whitespace-nowrap">All Media</button>
+<button class="px-md py-sm bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-high transition-colors whitespace-nowrap">Interiors</button>
+<button class="px-md py-sm bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-high transition-colors whitespace-nowrap">Equipment</button>
+<button class="px-md py-sm bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-high transition-colors whitespace-nowrap">Success Stories</button>
+</div>
+</div>
+<div class="masonry">
+<!-- Item 1: Interior -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(0)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-[4/5]" data-alt="A luxury dental clinic reception area featuring sleek white marble surfaces, soft teal ambient lighting, and modern designer furniture. The atmosphere is calm and sophisticated, more like a high-end spa than a traditional medical office. The space is filled with bright, diffused natural light from large windows, creating a sense of openness and tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHgRzKSW4Z0dG0Uy5XIrWyiJsuYSfajRNdcoGjpGxd5d88zgzfF3aA_DtplCpifrwM5B1PE4uY_Sy-0M1KT2hMXZ1yYhFezlJDeoL9VttZx-l47SpvaQLOt3DdGOSR9vFquP03APGQCfGPc6_8VUx2zm_ujLcx6fCbTQNresUeNGTvqh1N9pUoHDs00djtBLs_x_yOk-URLloXUvKv25Qu7rADxIjrV9qkf2WOzsfzVr4LZC_eK3ipTAJnEKeEd0HrFUvz9oz5w4Q"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Interiors</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Luxury Patient Lounge</h3>
+</div>
+</div>
+</div>
+<!-- Item 2: Technology -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(1)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-square" data-alt="Close-up of cutting-edge dental equipment including a high-definition dental 3D scanner and surgical laser. The tools are made of polished chrome and medical-grade white composite, reflecting clean, high-tech engineering. The background is a soft-focus treatment room with teal accents, emphasizing the precision and innovation of the clinic's technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNSodJtyQS1pvEANQEriGQ0LSfokzBWNNhF2T7gtX8CilU4GDP4DzgCgWxp7zcR-vnROTkyN-RrECoYii91OGkeFE-4aofsax5qPARFeUuvVp_qtT5mIHqItVP20AKn4E0FF8I9PNge9O-vZH3eMgshdxosp8Cej9z3OJMK-b9sUlVoY95bc7qsNVRI98s93iDxGZhmIVXwqcEEtdnvgAO4s1uhoeYglg1g5OXMHKELlHNFiDOXbiw9M9QUid0Q6xTMx75ZkTvNt0"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Technology</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Precision Diagnostics</h3>
+</div>
+</div>
+</div>
+<!-- Item 3: Patient Joy -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(2)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-[3/4]" data-alt="A portrait of a happy, diverse patient smiling confidently after a successful treatment. The setting is the clinic's bright, modern hallway. The person glows with confidence, wearing professional attire. The lighting is warm and flattering, capturing the emotional impact of a restored smile in a high-end medical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMTA_xhL4ptpa-RL4PrH0Hha4J9Wbm77h44Le_d7V5JiKLRsyhAEuetNv3Ko9FfhFpEJYkVAP3YkQz8en5jA8ZJbttlzjj7JGZM8H3BlFJ9CSQvFLneN6_qPr8ZsYDWFok97WIyuQ4fqVrGG_D61kex7cXsoG-05-kHlo1Q70ovHIFMlIg6YWqfXvTCN3z3YBq8nGda4sS_LtAT6iCGQY0_EyDkPWDvB0ucg__3wqON6mxL2Jlz6tcz8S4qyG0o7npFhQKY1Op1Ao"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Patient Story</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Confidence Restored</h3>
+</div>
+</div>
+</div>
+<!-- Item 4: Equipment -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(3)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-video" data-alt="An ultra-modern dental treatment operatory featuring an ergonomic reclining chair in soft grey leather, surrounded by integrated digital displays and smart cabinetry. The room is spotless and minimalist, illuminated by advanced LED lighting that creates a shadowless environment. The design prioritizes patient comfort and clinical efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSpM_gTY9bnknMP42EzfT4CpyTtCXMCQH5joqiFqzho_HgWILXoKkVbbWbAPqNYLtdINOb7OFB8_HvvNDBuFgnw7dMdolRTP3hvwN54QYCdAfxYc4OyMgc30FakSTQjIbIsFvN7y56QJLIafMMZgcE0fEXdU7dfa30Ji0iKzDJt3RmhLmhLD_a0Ii07NxQIgKJCj8MhB27LkV2jWFFGaOPvf9xFONl8zwiXAEk9oF4Cx98LXNgNeYzUJHsxKKQqFecCFvAUvTCf8"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Clinical Space</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Smart Treatment Suites</h3>
+</div>
+</div>
+</div>
+<!-- Item 5: Sterilization -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(4)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-[4/5]" data-alt="A sterile dental instruments room showing a high-tech autoclave and vacuum-sealed tools arranged with surgical precision on stainless steel trays. The lighting is bright and cool, emphasizing a hyper-clean environment. The aesthetic is industrial yet highly refined, showcasing the clinic's uncompromising commitment to hygiene and patient safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDChSVV6PyleL9E-FU3ZvMoMTjZUg3TyrPG8iTLot0njyqzsZABmJKVZKTH2UCBNXUmyMAr6RnrtgyAqKwFPE7gGodfK9MqlKw_w9IeisGOn36KH5QEkxCrLenrAMUcmmmgm9FANb0IwR0ZWtdkIdfh9a4VV_mrFZdvWJZN6kxT9c0ymy2HHOcirXrKubBF9Bzq2avzT6hghCsek8vrNtfVawe5olztZ6FC_7avXaO2z3BQvfXyNOZoHhLlEY-lOKg5gq-uiQEmAE"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Safety</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Advanced Sterilization</h3>
+</div>
+</div>
+</div>
+<!-- Item 6: Exterior/Details -->
+<div class="masonry-item group cursor-pointer" onclick="openLightbox(5)">
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scale-100 group-hover:scale-[1.02]">
+<img class="w-full object-cover aspect-square" data-alt="The elegant exterior signage of Smile Kraft Dental Clinic, featuring a minimalist logo back-lit with warm gold lighting on a textured charcoal wall. The building's architecture is modern and glass-heavy. The scene is shot during the blue hour, giving it a sophisticated and welcoming glow that contrasts beautifully with the primary teal brand colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkRj1Htc7wfRoTFzyIJytyOiS5QMZmEubbfSImTxK8KxNyoAcfrnR8ZXHteOgFpiMItOK9uSB0MX85OEb2Mg5IP9wlclwUNLjQ0G3M2LlKrmr_yX8cK886oPOTRIyEQsnf8HyGxi3cEw-CJ5k1g0vM7hOSZ5ooUnu5vgeAIdFc4KSzrUVQHqjNopVktgygoxWOa48ubWv8YSnUISdGowD99aOn0D2RnHtybpURHiIdE2fKRdyqcr4O8ry8-HCsbsou_OJJJ8Hpsaw"/>
+<div class="p-md">
+<span class="font-label-sm text-label-sm text-primary uppercase">Boutique</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Our Iconic Clinic</h3>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Call to Action -->
+<section class="px-margin-desktop py-xl bg-primary-container text-on-primary-container">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Ready for Your Transformation?</h2>
+<p class="font-body-lg text-body-lg opacity-90">Join thousands of happy patients who trust Smile Kraft for their dental wellness and aesthetic goals.</p>
+</div>
+<div class="flex gap-md shrink-0">
+<button class="bg-surface text-primary px-xl py-md rounded-xl font-headline-sm text-headline-sm hover:shadow-2xl transition-all active:scale-95">
+                    Book Consultation
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full rounded-t-xl border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-primary mb-md">Smile Kraft</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Excellence in Dental Care &amp; Orthodontics. Redefining medical luxury for the modern era.</p>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg mb-md text-on-surface">Quick Links</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Treatments</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Doctors</a></li>
+<li><a class="text-primary underline font-body-sm text-body-sm" href="#">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg mb-md text-on-surface">Support</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Cookie Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Patient Portal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg mb-md text-on-surface">Connect</h4>
+<div class="flex gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center border border-outline-variant text-primary hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center border border-outline-variant text-primary hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-md border-t border-outline-variant max-w-[1440px] mx-auto">
+<p class="text-on-surface-variant font-body-sm text-body-sm text-center md:text-left">© 2024 Smile Kraft Dental Clinic &amp; Orthodontic Center. All rights reserved.</p>
+</div>
+</footer>
+<!-- Lightbox Overlay (Hidden by default) -->
+<div class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" id="lightbox">
+<button class="absolute top-8 right-8 text-white text-4xl" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button class="absolute left-8 text-white/50 hover:text-white transition-colors" onclick="prevImage()">
+<span class="material-symbols-outlined text-[64px]">chevron_left</span>
+</button>
+<div class="max-w-5xl max-h-[819px] px-md">
+<img class="w-full h-full object-contain rounded-lg" data-alt="Lightbox expanded view" id="lightbox-img" src=""/>
+<h3 class="text-white font-headline-lg text-headline-lg mt-md text-center" id="lightbox-title"></h3>
+</div>
+<button class="absolute right-8 text-white/50 hover:text-white transition-colors" onclick="nextImage()">
+<span class="material-symbols-outlined text-[64px]">chevron_right</span>
+</button>
+</div>
+<script>
+        // Before & After Slider Logic
+        const container = document.getElementById('slider-container');
+        const handle = document.getElementById('slider-handle');
+        const clip = document.getElementById('before-image-clip');
+
+        let isDragging = false;
+
+        const moveSlider = (e) => {
+            if (!isDragging) return;
+            const rect = container.getBoundingClientRect();
+            let x = (e.pageX || e.touches[0].pageX) - rect.left;
+            x = Math.max(0, Math.min(x, rect.width));
+            const percent = (x / rect.width) * 100;
+            
+            handle.style.left = `${percent}%`;
+            clip.style.width = `${percent}%`;
+        };
+
+        handle.addEventListener('mousedown', () => isDragging = true);
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('mousemove', moveSlider);
+        
+        handle.addEventListener('touchstart', () => isDragging = true);
+        window.addEventListener('touchend', () => isDragging = false);
+        window.addEventListener('touchmove', moveSlider);
+
+        // Gallery Data
+        const galleryItems = [
+            { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000", title: "Luxury Patient Lounge" },
+            { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000", title: "Precision Diagnostics" },
+            { src: "https://images.unsplash.com/photo-1557425955-df376b5903c8?auto=format&fit=crop&q=80&w=2000", title: "Confidence Restored" },
+            { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2000", title: "Smart Treatment Suites" },
+            { src: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=2000", title: "Advanced Sterilization" },
+            { src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2000", title: "Our Iconic Clinic" }
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightbox() {
+            const img = document.getElementById('lightbox-img');
+            const title = document.getElementById('lightbox-title');
+            img.src = galleryItems[currentIndex].src;
+            title.textContent = galleryItems[currentIndex].title;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateLightbox();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightbox();
+        }
+
+        // Close on ESC
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    
+
+    // Hamburger menu toggle
+    (function() {
+        var btn = document.getElementById('hamburger-btn');
+        var menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function() {
+            btn.classList.toggle('is-open');
+            menu.classList.toggle('open');
+        });
+        // Close on link click
+        menu.querySelectorAll('a, button').forEach(function(el) {
+            el.addEventListener('click', function() {
+                btn.classList.remove('is-open');
+                menu.classList.remove('open');
+            });
+        });
+    })();
+    </script>
+
+</body></html>
