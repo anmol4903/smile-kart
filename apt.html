@@ -406,11 +406,11 @@
 <div class="space-y-sm">
 <a class="flex items-center gap-3 hover:underline" href="tel:+15551234567">
 <span class="material-symbols-outlined">call</span>
-<span class="font-label-lg text-label-lg">+91 XXXXXXXXXX</span>
+<span class="font-label-lg text-label-lg">+1 (555) 123-4567</span>
 </a>
 <a class="flex items-center gap-3 hover:underline" href="mailto:care@smilekraft.com">
 <span class="material-symbols-outlined">mail</span>
-<span class="font-label-lg text-label-lg">@smilekraft.com</span>
+<span class="font-label-lg text-label-lg">care@smilekraft.com</span>
 </a>
 </div>
 </div>
@@ -518,7 +518,7 @@
     const date = summaryData.date;
     const time = summaryData.time;
 
-    const name = document.querySelector('input[placeholder="Ravi kumar"]').value;
+    const name = document.querySelector('input[type="text"]').value;
     const email = document.querySelector('input[type="email"]').value;
     const phone = document.querySelector('input[type="tel"]').value;
     const notes = document.querySelector('textarea').value;
@@ -544,7 +544,7 @@ ${notes}`;
     "https://wa.me/919792978777?text=" +
     encodeURIComponent(message);
 
-    window.open(whatsappUrl, "_blank");
+    window.location.href = whatsappUrl;
 }
         }
 
@@ -592,8 +592,6 @@ ${notes}`;
 
         // Initialize progress
         updateProgress();
-
-
     // Hamburger menu toggle
     (function() {
         var btn = document.getElementById('hamburger-btn');
